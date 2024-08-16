@@ -1,0 +1,34 @@
+#!/bin/bash
+
+#movie is a hit or flop
+
+<<disclaimer
+this review doesn't makes a film hit or flop at box-office
+its totally based on people
+disclaimer
+
+function movie_review(){
+
+
+read -p "enter $2 $1 review in percentage" percent
+
+
+if [[ $percent -le 30 ]];
+then 
+	echo " $1 is a flop"
+elif [[ $percent -gt 40 && $percent -lt 80 ]];
+then 
+	echo " $1 is average"
+else
+	echo " $1 is a hit"
+fi
+
+}
+
+
+
+
+
+
+
+movie_review "shakarabharanam" "bomma"
